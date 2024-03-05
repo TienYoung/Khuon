@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{75fcee09-0624-4d67-af97-39065eccfadd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Models">
+      <UniqueIdentifier>{833916e5-6bda-43ba-b495-0c6ad3b4297f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{76de707c-64f1-4d66-aa75-09085b63c21e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Textures\Clarens Night 02">
+      <UniqueIdentifier>{28aad5c2-0a50-4843-9602-ce82366bfac1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gl3w.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Assets\Shaders\base.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\base.mesh">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\cube.mesh">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\quad.mesh">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Models\DamagedHelmet.gltf">
+      <Filter>Resource Files\Models</Filter>
+    </None>
+    <None Include="..\Assets\Textures\Clarens Night 02\nx.hdr">
+      <Filter>Resource Files\Textures\Clarens Night 02</Filter>
+    </None>
+    <None Include="..\Assets\Textures\Clarens Night 02\ny.hdr">
+      <Filter>Resource Files\Textures\Clarens Night 02</Filter>
+    </None>
+    <None Include="..\Assets\Textures\Clarens Night 02\nz.hdr">
+      <Filter>Resource Files\Textures\Clarens Night 02</Filter>
+    </None>
+    <None Include="..\Assets\Textures\Clarens Night 02\px.hdr">
+      <Filter>Resource Files\Textures\Clarens Night 02</Filter>
+    </None>
+    <None Include="..\Assets\Textures\Clarens Night 02\py.hdr">
+      <Filter>Resource Files\Textures\Clarens Night 02</Filter>
+    </None>
+    <None Include="..\Assets\Textures\Clarens Night 02\pz.hdr">
+      <Filter>Resource Files\Textures\Clarens Night 02</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\skybox.mesh">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\skybox.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\hair.mesh">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\Assets\Shaders\hair.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+#version 460
+#extension GL_NV_mesh_shader : require
+
+layout(local_size_x = 1) in;
+layout(triangles, max_vertices = 4, max_primitives = 2) out;
+ 
+layout(std140, binding = 0) uniform UBO
+{
+	mat4 MVP;
+};
+
+// Custom vertex output block
+layout (location = 0) out PerVertexData
+{
+  vec2 uv;
+} vertex_out[];  // [max_vertices]
+ 
+ 
+void main()
+{
+    uint size = gl_WorkGroupSize.x;
+    uint id = gl_WorkGroupID.x;
+
+    float x = id % 8;
+    float y = id / 8;
+    
+    // Vertices
+    gl_MeshVerticesNV[0].gl_Position = MVP * vec4(-1.0, -1.0, 0.0, 1.0) + vec4(x, y, 0, 0); // Upper Left
+    gl_MeshVerticesNV[1].gl_Position = MVP * vec4( 1.0, -1.0, 0.0, 1.0) + vec4(x, y, 0, 0); // Upper Right
+    gl_MeshVerticesNV[2].gl_Position = MVP * vec4(-1.0,  1.0, 0.0, 1.0) + vec4(x, y, 0, 0); // Bottom Left
+    gl_MeshVerticesNV[3].gl_Position = MVP * vec4( 1.0,  1.0, 0.0, 1.0) + vec4(x, y, 0, 0); // Bottom Right
+    gl_PrimitiveIndicesNV[0] = 0;
+    gl_PrimitiveIndicesNV[1] = 1;
+    gl_PrimitiveIndicesNV[2] = 2;
+    gl_PrimitiveIndicesNV[3] = 2;
+    gl_PrimitiveIndicesNV[4] = 1;
+    gl_PrimitiveIndicesNV[5] = 3;
+    gl_PrimitiveCountNV += 2;
+
+    // UV
+    vertex_out[0].uv = vec2(0.0, 0.0);
+    vertex_out[1].uv = vec2(0.0, 1.0);
+    vertex_out[2].uv = vec2(1.0, 0.0);
+    vertex_out[3].uv = vec2(1.0, 1.0);
+ }
