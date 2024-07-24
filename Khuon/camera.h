@@ -82,7 +82,9 @@ public:
 
 	Camera& Rotate(float pitch, float yaw)
 	{
-		m_Rotation = glm::angleAxis(glm::radians(-yaw * 0.1f), glm::vec3(0.0f, 1.0f, 0.0f)) * glm::rotate(m_Rotation, glm::radians(pitch * 0.1f), glm::vec3(1.0f, 0.0f, 0.0f));
+		//m_Rotation = glm::angleAxis(glm::radians(-yaw * 0.1f), glm::vec3(0.0f, 1.0f, 0.0f)) * glm::rotate(m_Rotation, glm::radians(pitch * 0.1f), glm::vec3(1.0f, 0.0f, 0.0f));
+		m_Rotation = glm::angleAxis(glm::radians(-yaw * 0.1f), glm::vec3(0.0f, 1.0f, 0.0f)) * m_Rotation * glm::angleAxis(glm::radians(pitch * 0.1f), glm::vec3(1.0f, 0.0f, 0.0f));
+		//m_Rotation = glm::angleAxis(glm::radians(pitch * 0.1f), glm::vec3(1.0f, 0.0f, 0.0f)) * m_Rotation * glm::angleAxis(glm::radians(-yaw * 0.1f), glm::vec3(0.0f, 1.0f, 0.0f));
 		return Instance();
 	}
 
